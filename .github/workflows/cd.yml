@@ -64,7 +64,7 @@ jobs:
       # reusable action to deploy on kyma
       - uses: ./.github/actions/deploy
         with:
-          env: dev
+          DOMAIN: ${{ secrets.DOMAIN }}
           IMAGEREGISTRY: ${{ secrets.IMAGEREGISTRY }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
